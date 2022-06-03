@@ -1,9 +1,11 @@
-import{ PostsList} from "./features"
+import{ PostsList,HeaderFeature,FooterFeature} from "./features"
 
 function App() {
   return (
     <div className="App">
-      <h1><PostsList/></h1>
+    <HeaderFeature/>
+     <PostsList/>
+     <FooterFeature/>
     </div>
   );
 }
