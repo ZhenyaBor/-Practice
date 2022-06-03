@@ -1,9 +1,9 @@
-import React from 'react';
+import{ PostsList} from "./features"
 
 function App() {
   return (
     <div className="App">
-      <h1>Привет</h1>
+      <h1><PostsList/></h1>
     </div>
   );
 }
