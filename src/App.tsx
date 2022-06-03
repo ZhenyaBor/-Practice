@@ -1,12 +1,12 @@
-import{ResetPage,PostsList,HeaderFeature,FooterFeature} from "./features"
+import{ResetPage,HeaderFeature,FooterFeature,HomeFeature} from "./features"
 
 function App() {
   return (
     <div className="App">
     <ResetPage>
-    <HeaderFeature/>
-     <PostsList/>
-     <FooterFeature/>
+      <HeaderFeature/>
+      <HomeFeature/>
+      <FooterFeature/>
     </ResetPage>
     </div>
   );

@@ -1,1 +1,1 @@
-export * from "./PostsList/components";
+export * from "./HomeFeature";
