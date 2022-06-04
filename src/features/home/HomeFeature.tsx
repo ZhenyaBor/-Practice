@@ -4,7 +4,6 @@ import HomePosts from "./components/HomePosts";
 
 export const HomeFeature = () => {
   const { posts } = useDataPost();
-
   return (
     <>
       <HomePosts>

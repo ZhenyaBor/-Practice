@@ -56,8 +56,7 @@ const HomePost = ({
     <div
       css={css`
         border-radius: 50%;
-        background-color: red;
-        width: 30px;
+        width: 50px;
         height: 30px;
         display: flex;
         justify-content: center;
@@ -66,7 +65,7 @@ const HomePost = ({
         float: right;
       `}
     >
-      <div>{reactions}</div>
+      <div>🖤 {reactions}</div>
     </div>
   </div>
 );
