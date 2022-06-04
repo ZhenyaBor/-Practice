@@ -1,13 +1,11 @@
-import{ResetPage,HeaderFeature,FooterFeature,HomeFeature} from "./features"
+import { HeaderFeature, FooterFeature, HomeFeature } from "./features";
 
 function App() {
   return (
     <div className="App">
-    <ResetPage>
-      <HeaderFeature/>
-      <HomeFeature/>
-      <FooterFeature/>
-    </ResetPage>
+      <HeaderFeature />
+      <HomeFeature />
+      <FooterFeature />
     </div>
   );
 }
