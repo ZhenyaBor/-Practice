@@ -18,6 +18,7 @@ const HomePost = ({
       border: solid 1px black;
       padding: 10px;
       background-color: #c0c0a5;
+      border-radius: 10px;
     `}
   >
     <h3

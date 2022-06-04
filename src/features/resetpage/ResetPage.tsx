@@ -91,7 +91,6 @@ export const ResetPage = ({ children }: any) => (
       }
     `}
   >
-    {" "}
-    {children}{" "}
+    {children}
   </div>
 );

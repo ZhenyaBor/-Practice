@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 
-
 interface PostInterface {
     id: number;
     title: string;
