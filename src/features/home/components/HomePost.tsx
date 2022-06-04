@@ -27,6 +27,7 @@ const HomePost = ({
         color: #602aff;
         text-align: center;
         margin-bottom: 10px;
+        font-weight: 600;
       `}
     >
       {title}
@@ -46,6 +47,7 @@ const HomePost = ({
         css={css`
           font-size: 16px;
           line-height: 20px;
+          font-weight: 500;
         `}
       >
         {body}
