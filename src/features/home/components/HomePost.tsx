@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
+import PostTeg from "./PostTeg";
 
 type Data = {
   reactions: number;
@@ -32,17 +33,11 @@ const HomePost = ({
     >
       {title}
     </h3>
-    <div>
-      <span
-        css={css`
-          font-size: 16px;
-          color: red;
-          text-transform: uppercase;
-        `}
-      >
-        {tags[1]}
-      </span>
-      :{" "}
+    <div
+      css={css`
+        margin-bottom: 10px;
+      `}
+    >
       <span
         css={css`
           font-size: 16px;
@@ -55,6 +50,17 @@ const HomePost = ({
     </div>
     <div
       css={css`
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      `}
+    >
+      {tags.map((tag: any) => (
+        <PostTeg tag={tag} />
+      ))}
+    </div>
+    <div
+      css={css`
         border-radius: 50%;
         width: 50px;
         height: 30px;
@@ -62,7 +68,6 @@ const HomePost = ({
         justify-content: center;
         align-items: center;
         margin-top: 20px;
-        float: right;
       `}
     >
       <div>🖤 {reactions}</div>
