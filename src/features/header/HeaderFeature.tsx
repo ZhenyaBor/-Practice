@@ -1,1 +1,1 @@
-export const HeaderFeature = () => <h1>Header</h1>
+export const HeaderFeature = () => <h1>Header</h1>;
