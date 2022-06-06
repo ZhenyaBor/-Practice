@@ -56,7 +56,7 @@ const HomePost = ({
       `}
     >
       {tags.map((tag: any) => (
-        <PostTeg tag={tag} />
+        <PostTeg key={tag.toString()} tag={tag} />
       ))}
     </div>
     <div
