@@ -1,8 +1,14 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { Link } from "react-router-dom";
+interface Props{
+item:{
+  name:string,
+  url:string
+}
+}
 
-const HeaderItemMenu = ({ item: { name, url } }: any) => {
+const HeaderItemMenu = ({ item: { name, url } }: Props) => {
   return (
     <li>
       <Link
