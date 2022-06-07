@@ -1,13 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import PostTeg from "../../home/components/PostTeg";
-import { usePost } from "../hooks/usePost";
 
-export const PostItems = () => {
-  const {
-    post: { body, title, tags },
-  }: any = usePost();
-
+function Post({ children, post }: any) {
   return (
     <div
       css={css`
@@ -26,9 +20,9 @@ export const PostItems = () => {
             color: red;
           `}
         >
-          {title}
+          {post.title}
         </span>
-        : {body}
+        : {post.body}
       </p>
       <div
         css={css`
@@ -38,10 +32,10 @@ export const PostItems = () => {
           margin-top: 10px;
         `}
       >
-        {tags?.map((tag: any) => {
-          return <PostTeg key={Math.random()} tag={tag} />;
-        })}
+        {children}
       </div>
     </div>
   );
-};
+}
+
+export default Post;
