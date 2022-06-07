@@ -14,6 +14,8 @@ export const PostItems = () => {
     background-color: #c0c0a5;
     border-radius: 10px;
     font-size: 25px;
+    width:50%;
+    margin:auto;
   `}
     >
         <p><span
