@@ -10,7 +10,7 @@ interface Post {
 
 export const usePost = () => {
     const [post, setPosts] = useState([] as ReadonlyArray<Post>);
-    console.log(post)
+
     useEffect(() => {
       fetch("https://dummyjson.com/posts/1")
         .then((res) => res.json())
