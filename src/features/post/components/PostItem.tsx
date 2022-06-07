@@ -4,7 +4,7 @@ import { usePost } from "../hooks/usePost";
   
 export const PostItems = () => {
 
-  const { posts }:any = usePost();
+  const { post:{body,title,tags} }:any = usePost();
 
   return(
     <div
@@ -20,8 +20,8 @@ export const PostItems = () => {
               css={css`
               color:red;
             `}
-        >{posts.title}</span>: {posts.body}</p>
-       <div> {posts.tags}</div>
+        >{title}</span>: {body}</p>
+       <div>{tags}</div>
       
     </div>
   )

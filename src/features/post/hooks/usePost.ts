@@ -9,8 +9,8 @@ interface Post {
   }
 
 export const usePost = () => {
-    const [posts, setPosts] = useState([] as ReadonlyArray<Post>);
-
+    const [post, setPosts] = useState([] as ReadonlyArray<Post>);
+    console.log(post)
     useEffect(() => {
       fetch("https://dummyjson.com/posts/1")
         .then((res) => res.json())
@@ -20,7 +20,7 @@ export const usePost = () => {
     }, []);
 
     return{
-        posts,
+        post,
     }
      
 }

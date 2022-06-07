@@ -18,7 +18,7 @@ export const useDataPost = () => {
       .then((data) => {
         setPosts(data.posts);
       });
-  }, []);
+  },[]);
 
   return{
       posts,
