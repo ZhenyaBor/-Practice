@@ -3,11 +3,11 @@ import Post from "./components/Post";
 import { usePost } from "./hooks/usePost";
 
 export const MorePost = () => {
-  const { post }: any = usePost();
+  const { post } = usePost();
   return (
     <>
       <Post post={post}>
-        {post.tags?.map((tag: any) => {
+        {post.tags?.map((tag) => {
           return <PostTeg key={Math.random()} tag={tag} />;
         })}
       </Post>

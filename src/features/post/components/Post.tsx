@@ -1,29 +1,35 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
+import { title } from "process";
+import { ReactNode } from "react";
 
-function Post({ children, post }: any) {
+interface Post {
+  children: ReactNode;
+  post: { title: string; body: string };
+}
+
+function Post({ children, post }: Post) {
   return (
     <div
       css={css`
-        border: solid 1px black;
-        padding: 10px;
         background-color: #c0c0a5;
         border-radius: 10px;
         font-size: 25px;
         width: 50%;
         margin: auto;
+        padding: 10px;
       `}
     >
-      <p>
+      <div>
         <span
           css={css`
             color: red;
           `}
         >
           {post.title}
-        </span>
-        : {post.body}
-      </p>
+        </span>{" "}
+        {post.body}
+      </div>
       <div
         css={css`
           display: flex;

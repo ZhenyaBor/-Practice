@@ -5,11 +5,12 @@ interface Post {
     title: string;
     body: string;
     reactions: number;
-    tags: [];
+    tags: string[];
   }
 
 export const usePost = () => {
-    const [post, setPosts] = useState([] as ReadonlyArray<Post>);
+    const [post, setPosts] = useState({} as Post);
+    console.log(post)
 
     useEffect(() => {
       fetch("https://dummyjson.com/posts/1")

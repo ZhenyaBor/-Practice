@@ -7,7 +7,7 @@ type tag = {
 
 const PostTeg = ({ tag }: tag) => {
   return (
-    <div
+    <button
       css={css`
         border: solid 1px black;
         padding: 5px;
@@ -18,7 +18,7 @@ const PostTeg = ({ tag }: tag) => {
       `}
     >
       {tag}
-    </div>
+    </button>
   );
 };
 
