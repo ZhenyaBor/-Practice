@@ -1,16 +1,18 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import PostTeg from "./PostTeg";
+import { Link } from "react-router-dom";
 
 type Data = {
+  id: number;
   reactions: number;
   title: string;
   body: string;
-  tags: any;
+  tags: string[];
 };
 
 const HomePost = ({
-  data: { body, title, reactions, tags },
+  data: { body, title, reactions, tags, id },
 }: {
   data: Data;
 }) => (
@@ -29,9 +31,16 @@ const HomePost = ({
         text-align: center;
         margin-bottom: 10px;
         font-weight: 600;
+        cursor: pointer;
+        :hover {
+          text-transform: uppercase;
+          text-decoration: underline;
+          transition: all 0.5s;
+          color: red;
+        }
       `}
     >
-      {title}
+      <Link to={`/post/${id}`}>{title}</Link>
     </h3>
     <div
       css={css`
@@ -55,7 +64,7 @@ const HomePost = ({
         align-items: center;
       `}
     >
-      {tags.map((tag: any) => (
+      {tags.map((tag: string) => (
         <PostTeg key={tag.toString()} tag={tag} />
       ))}
     </div>

@@ -1,5 +1,5 @@
 import { AddRouter } from "./common/components";
-import { HeaderFeature, FooterFeature, HomeFeature } from "./features";
+import { HeaderFeature, FooterFeature } from "./features";
 
 function App() {
   return (

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 interface Post {
     id: number;
@@ -10,10 +11,11 @@ interface Post {
 
 export const usePost = () => {
     const [post, setPosts] = useState({} as Post);
-    console.log(post)
+    const {postId} = useParams()
+    console.log(postId)
 
     useEffect(() => {
-      fetch("https://dummyjson.com/posts/1")
+      fetch(`https://dummyjson.com/posts/${postId}`)
         .then((res) => res.json())
         .then((data) => {
           setPosts(data);
