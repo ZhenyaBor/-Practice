@@ -24,23 +24,28 @@ const HomePost = ({
       border-radius: 10px;
     `}
   >
-    <h3
-      css={css`
-        font-size: 24px;
-        color: #602aff;
-        text-align: center;
-        margin-bottom: 10px;
-        font-weight: 600;
-        cursor: pointer;
-        :hover {
-          text-transform: uppercase;
-          text-decoration: underline;
-          transition: all 0.5s;
-          color: red;
-        }
-      `}
-    >
-      <Link to={`/post/${id}`}>{title}</Link>
+    <h3>
+      <Link
+        to={`/post/${id}`}
+        css={css`
+          display: block;
+          font-size: 24px;
+          color: inherit;
+          text-align: center;
+          margin-bottom: 10px;
+          font-weight: 600;
+          cursor: pointer;
+
+          :hover {
+            text-transform: uppercase;
+            text-decoration: underline;
+            color: red;
+            transition: all 0.5s;
+          }
+        `}
+      >
+        {title}
+      </Link>
     </h3>
     <div
       css={css`
