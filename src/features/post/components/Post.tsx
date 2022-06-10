@@ -1,15 +1,15 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { ReactNode } from "react";
+import { ReactNode} from "react";
 
-interface Post {
+interface Props {
   children: ReactNode;
   post: { title: string; body: string };
 }
 
-function Post({ children, post }: Post) {
+function Post({ children, post }: Props) {
   return (
-    <div
+ <div
       css={css`
         background-color: #c0c0a5;
         border-radius: 10px;
