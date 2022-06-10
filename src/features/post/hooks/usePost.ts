@@ -1,16 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
-interface Post {
-    id: number;
-    title: string;
-    body: string;
-    reactions: number;
-    tags: string[];
-  }
+import {  PostInterface} from "../interface";
 
 export const usePost = () => {
-    const [post, setPosts] = useState({} as Post);
+    const [post, setPosts] = useState({} as PostInterface);
     const {postId} = useParams()
     console.log(postId)
 
