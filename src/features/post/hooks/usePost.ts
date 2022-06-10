@@ -12,7 +12,7 @@ export const usePost = () => {
         .then((res) => res.json())
         .then((data) => {
           setPosts(data);
-          setLoader(true)
+          setLoader(false)
         });
     }, []);
 
