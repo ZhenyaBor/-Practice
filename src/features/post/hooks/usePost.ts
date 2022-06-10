@@ -5,18 +5,20 @@ import {  PostInterface} from "../interface";
 export const usePost = () => {
     const [post, setPosts] = useState({} as PostInterface);
     const {postId} = useParams()
-    console.log(postId)
+    const [loader,setLoader] = useState(true)
 
     useEffect(() => {
       fetch(`https://dummyjson.com/posts/${postId}`)
         .then((res) => res.json())
         .then((data) => {
           setPosts(data);
+          setLoader(true)
         });
     }, []);
 
     return{
         post,
+        loader,
     }
      
 }

@@ -14,6 +14,9 @@ const Loadong = () => {
         height: 500px;
         color: white;
         font-size: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       `}
     >
       Loadong...
