@@ -14,7 +14,7 @@ const HeaderItemMenu = ({ item: { name, url } }: Props) => {
     <li>
       <Link
         css={css`
-          color: black;
+          color: white;
           font-size: 20px;
           font-weight: 600;
           :hover {
