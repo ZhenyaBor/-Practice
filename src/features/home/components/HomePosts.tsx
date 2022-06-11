@@ -1,7 +1,12 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
+import { ReactNode } from "react";
 
-const HomePosts = ({ children }: any) => {
+interface Child {
+  children: ReactNode;
+}
+
+const HomePosts = ({ children }: Child) => {
   return (
     <div
       css={css`

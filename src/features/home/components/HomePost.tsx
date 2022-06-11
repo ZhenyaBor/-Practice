@@ -2,14 +2,7 @@
 import { css } from "@emotion/react";
 import PostTeg from "./PostTeg";
 import { Link } from "react-router-dom";
-
-type Data = {
-  id: number;
-  reactions: number;
-  title: string;
-  body: string;
-  tags: string[];
-};
+import { Data } from "../interface";
 
 const HomePost = ({
   data: { body, title, reactions, tags, id },
