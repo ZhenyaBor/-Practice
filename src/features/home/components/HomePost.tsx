@@ -62,7 +62,7 @@ const HomePost = ({
         align-items: center;
       `}
     >
-      {tags.map((tag: string) => (
+      {tags.map((tag) => (
         <PostTeg key={tag.toString()} tag={tag} />
       ))}
     </div>
