@@ -1,13 +1,13 @@
 import { useDataPost } from "./hooks";
 import HomePost from "./components/HomePost";
 import HomePosts from "./components/HomePosts";
-import Loadong from "../loading/Loadong";
+import Loading from "../loading/Loadong";
 
 export const HomeFeature = () => {
   const { posts, loader } = useDataPost();
 
   if (loader) {
-    return <Loadong />;
+    return <Loading />;
   }
 
   return (

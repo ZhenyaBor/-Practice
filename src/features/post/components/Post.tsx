@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { ReactNode} from "react";
+import { ReactNode } from "react";
 
 interface Props {
   children: ReactNode;
@@ -9,11 +9,13 @@ interface Props {
 
 function Post({ children, post }: Props) {
   return (
- <div
+    <div
       css={css`
         background-color: #c0c0a5;
         border-radius: 10px;
-        font-size: 25px;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
         width: 50%;
         margin: auto;
         padding: 10px;
@@ -23,6 +25,7 @@ function Post({ children, post }: Props) {
         <span
           css={css`
             color: red;
+            font-size: 25px;
           `}
         >
           {post.title}
