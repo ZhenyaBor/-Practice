@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { ReactNode } from "react";
+import Grid from '@mui/material/Grid';
 
 interface Child {
   children: ReactNode;
