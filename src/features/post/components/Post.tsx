@@ -10,7 +10,7 @@ interface Props {
 function Post({ children, post }: Props) {
   return (
     <>
-    <Container sx={{ paddingTop:"90px"}}>
+    <Container sx={{ padding:"90px"}}>
     <Card >
          <CardContent >
          <Typography sx={{ fontSize: 24 }} color="text.secondary" gutterBottom>
