@@ -2,15 +2,13 @@
 import { css } from "@emotion/react";
 import { Link } from "react-router-dom";
 import {MenuItem} from '@mui/material';
+import {MenuNav} from '../interface';
 
 interface Props {
-  item: {
-    name: string;
-    url: string;
-  };
+  item:MenuNav;
 }
 
-const HeaderItemMenu = ({ item: { name, url } }: Props) => {
+const HeaderItemMenu = ({ item: { name, url } }:Props) => {
   return (
     <MenuItem >
       <Link

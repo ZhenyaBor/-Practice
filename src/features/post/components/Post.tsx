@@ -1,6 +1,9 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { ReactNode } from "react";
+import Card from '@mui/material/Card';
+import {Typography, CardContent,Container}from '@mui/material';
+
 
 interface Props {
   children: ReactNode;
@@ -9,30 +12,17 @@ interface Props {
 
 function Post({ children, post }: Props) {
   return (
-    <div
-      css={css`
-        background-color: #c0c0a5;
-        border-radius: 10px;
-        font-size: 16px;
-        line-height: 20px;
-        font-weight: 500;
-        width: 50%;
-        margin:90px auto;
-        padding: 10px;
-      `}
-    >
-      <div>
-        <span
-          css={css`
-            color: red;
-            font-size: 25px;
-          `}
-        >
+    <>
+    <Container sx={{ paddingTop:"90px"}}>
+    <Card >
+         <CardContent >
+         <Typography sx={{ fontSize: 24 }} color="text.secondary" gutterBottom>
           {post.title}
-        </span>{" "}
+          </Typography>
+          <Typography sx={{ fontSize: 16 }} component="div">
         {post.body}
-      </div>
-      <div
+     </Typography>
+         <div
         css={css`
           display: flex;
           justify-content: space-around;
@@ -42,7 +32,10 @@ function Post({ children, post }: Props) {
       >
         {children}
       </div>
-    </div>
+      </CardContent>
+    </Card>
+    </Container>
+    </>
   );
 }
 

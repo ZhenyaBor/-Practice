@@ -1,8 +1,14 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import {Toolbar,Typography,AppBar} from '@mui/material'
+import { ReactNode } from "react";
 
-export const HeaderMenu = ({ children }: any) => (
+interface Children{
+  children:ReactNode,
+}
+
+
+export const HeaderMenu = ({ children }:Children) => (
   <AppBar position="fixed"
   css={css`
   background-color: grey;

@@ -4,7 +4,7 @@ import dataMenu from "./components/dataMenu.json";
 
 export const HeaderFeature = () => (
   <>
-    <HeaderMenu dataMenu={dataMenu}>
+    <HeaderMenu >
       {dataMenu.map((item) => (
         <HeaderItemMenu key={item.id} item={item} />
       ))}
