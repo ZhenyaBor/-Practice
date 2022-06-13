@@ -7,7 +7,11 @@ const Pagination = () => {
   return (
     <div
       css={css`
-        width: 400px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
         .css-1y7coo4-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
           color: white;
         }

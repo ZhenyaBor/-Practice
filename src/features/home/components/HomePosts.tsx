@@ -11,7 +11,8 @@ const HomePosts = ({ children }: Child) => {
     <div
       css={css`
         max-width: 1400px;
-        margin: 90px auto;
+        margin: auto;
+        margin-top: 90px;
         box-sizing: border-box;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));

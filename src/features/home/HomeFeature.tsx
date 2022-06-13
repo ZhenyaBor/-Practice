@@ -17,8 +17,8 @@ export const HomeFeature = () => {
         {posts.map((post) => (
           <HomePost key={post.id} data={post} />
         ))}
-        <Pagination />
       </HomePosts>
+      <Pagination />
     </>
   );
 };
