@@ -9,7 +9,7 @@ type tag = {
 const PostTeg = ({ tag }: tag) => {
   return (
     <>
-    <Button variant="contained" href="#contained-buttons"
+    <Button  variant="contained" href="#contained-buttons"
     css={css`
     padding:0 10px;
     background-color:#520101;

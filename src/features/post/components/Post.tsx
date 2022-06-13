@@ -1,8 +1,5 @@
-/** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
 import { ReactNode } from "react";
-import Card from '@mui/material/Card';
-import {Typography, CardContent,Container}from '@mui/material';
+import {Typography, CardContent,Container,Card,Stack}from '@mui/material';
 
 
 interface Props {
@@ -22,16 +19,13 @@ function Post({ children, post }: Props) {
           <Typography sx={{ fontSize: 16 }} component="div">
         {post.body}
      </Typography>
-         <div
-        css={css`
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-          margin-top: 10px;
-        `}
-      >
+     <Stack
+     sx={{ mt: 1.5 }}
+  direction="row"
+  spacing={2}
+>
         {children}
-      </div>
+        </Stack>
       </CardContent>
     </Card>
     </Container>

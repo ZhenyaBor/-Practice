@@ -3,7 +3,7 @@ import { css } from "@emotion/react";
 import PostTeg from "./PostTeg";
 import { Link } from "react-router-dom";
 import { Data } from "../interface";
-import { Card,CardContent,Typography,CardActions } from '@mui/material';
+import { Card,CardContent,Typography,Stack,CardActions } from '@mui/material';
 
 
 
@@ -39,11 +39,17 @@ const HomePost = ({
         {body}
       </Typography>
 
-      <CardActions sx={{ mt: 1.5 }}>
+      <Stack
+     sx={{ mt: 1.5 }}
+  direction="row"
+  justifyContent="center"
+  alignItems="center"
+  spacing={2}
+>
       {tags.map((tag) => (
         <PostTeg key={tag.toString()} tag={tag} />
       ))}
-    </CardActions>
+    </Stack>
     <CardActions sx={{ mt: 1.5 }}>
       <div>🖤 {reactions}</div>
       </CardActions>
