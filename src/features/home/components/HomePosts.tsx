@@ -1,7 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { ReactNode } from "react";
-import Grid from '@mui/material/Grid';
 
 interface Child {
   children: ReactNode;
@@ -12,7 +11,7 @@ const HomePosts = ({ children }: Child) => {
     <div
       css={css`
         max-width: 1400px;
-        margin:90px auto;
+        margin: 90px auto;
         box-sizing: border-box;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
