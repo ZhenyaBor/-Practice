@@ -17,7 +17,7 @@ function Post({ children, post }: Props) {
         line-height: 20px;
         font-weight: 500;
         width: 50%;
-        margin: auto;
+        margin:90px auto;
         padding: 10px;
       `}
     >

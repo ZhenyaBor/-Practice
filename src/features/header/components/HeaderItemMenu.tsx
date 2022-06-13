@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { Link } from "react-router-dom";
+import {MenuItem} from '@mui/material';
 
 interface Props {
   item: {
@@ -11,7 +12,7 @@ interface Props {
 
 const HeaderItemMenu = ({ item: { name, url } }: Props) => {
   return (
-    <li>
+    <MenuItem >
       <Link
         css={css`
           color: white;
@@ -25,7 +26,7 @@ const HeaderItemMenu = ({ item: { name, url } }: Props) => {
       >
         {name}
       </Link>
-    </li>
+      </MenuItem >
   );
 };
 

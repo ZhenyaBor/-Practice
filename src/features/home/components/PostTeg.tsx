@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
+import {Button} from '@mui/material';
 
 type tag = {
   tag: string;
@@ -7,18 +8,16 @@ type tag = {
 
 const PostTeg = ({ tag }: tag) => {
   return (
-    <button
-      css={css`
-        border: solid 1px black;
-        padding: 5px;
-        background-color: #1e434c;
-        color: white;
-        border-radius: 5px;
-        text-transform: uppercase;
-      `}
+    <>
+    <Button variant="contained" href="#contained-buttons"
+    css={css`
+    padding:0 10px;
+    background-color:#520101;
+  `}
     >
       {tag}
-    </button>
+    </Button>
+    </>
   );
 };
 
