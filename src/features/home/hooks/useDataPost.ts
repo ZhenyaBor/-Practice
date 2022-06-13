@@ -1,12 +1,7 @@
 import { useEffect, useState } from "react";
+import {PostInterface} from "../interface";
 
-interface PostInterface {
-    id: number;
-    title: string;
-    body: string;
-    reactions: number;
-    tags: [];
-  }
+
 
 export const useDataPost = () => {
 
@@ -14,7 +9,7 @@ export const useDataPost = () => {
     const [loader,setLoading] = useState(true)
 
   useEffect(() => {
-    fetch("https://dummyjson.com/posts?limit=10")
+    fetch("https://dummyjson.com/posts?limit=12")
       .then((res) => res.json())
       .then((data) => {
         setPosts(data.posts);
@@ -27,5 +22,3 @@ export const useDataPost = () => {
       loader,
   }
 }
-
-

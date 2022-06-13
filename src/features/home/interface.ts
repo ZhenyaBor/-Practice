@@ -1,4 +1,4 @@
-export interface Data {
+export interface PostInterface {
     id: number;
     reactions: number;
     title: string;
