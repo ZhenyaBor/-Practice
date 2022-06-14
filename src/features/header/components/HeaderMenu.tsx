@@ -1,21 +1,28 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import {Toolbar,Typography,AppBar} from '@mui/material'
+import { Toolbar, Stack, AppBar, Button, Divider } from "@mui/material";
 import { ReactNode } from "react";
+import Popup from "./Popup";
 
-interface Children{
-  children:ReactNode,
+interface Children {
+  children: ReactNode;
 }
 
-
-export const HeaderMenu = ({ children }:Children) => (
-  <AppBar position="fixed"
-  css={css`
-  background-color: grey;
-`}
+export const HeaderMenu = ({ children }: Children) => (
+  <AppBar
+    position="fixed"
+    css={css`
+      background-color: grey;
+    `}
   >
-   <Toolbar>
-    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+    <Toolbar>
+      <Stack
+        direction="row"
+        divider={<Divider orientation="vertical" flexItem />}
+        spacing={2}
+        width={"100%"}
+        alignItems="center"
+      >
         <img
           src="https://www.iorecipes.com/images/profile/f88a2698-e3fb-46a4-8296-1f80b308d8e2_9cd055c2.png"
           alt="logo"
@@ -24,8 +31,9 @@ export const HeaderMenu = ({ children }:Children) => (
             height: 60px;
           `}
         />
-       </Typography>
+        <Popup />
+      </Stack>
       {children}
-      </Toolbar>
+    </Toolbar>
   </AppBar>
 );
