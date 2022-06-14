@@ -5,3 +5,9 @@ export interface PostInterface {
     body: string;
     tags: string[];
   };
+
+  export interface PaginationInterface {
+    limit:number;
+    total:number;
+    page:number;
+  };
