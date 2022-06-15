@@ -12,7 +12,6 @@ export const useDataPost = () => {
       page:1
     })
 
-
     const onChangePagination =(e:any,value:number) =>{
       setPagination({...pagination, page: value})
     }

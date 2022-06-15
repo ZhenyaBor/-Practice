@@ -4,13 +4,14 @@ import * as React from "react";
 import { styled } from "@mui/material/styles";
 import CloseIcon from "@mui/icons-material/Close";
 import {
-  Typography,
+
   IconButton,
   DialogActions,
   DialogContent,
   DialogTitle,
   Dialog,
   Button,
+  TextField,
 } from "@mui/material";
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
@@ -83,28 +84,15 @@ export default function Popup() {
           id="customized-dialog-title"
           onClose={handleClose}
         >
-          Modal title
+          Add a post
         </BootstrapDialogTitle>
         <DialogContent dividers>
-          <Typography gutterBottom>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros.
-          </Typography>
-          <Typography gutterBottom>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-            auctor.
-          </Typography>
-          <Typography gutterBottom>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
-            cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
-            dui. Donec ullamcorper nulla non metus auctor fringilla.
-          </Typography>
+        <TextField fullWidth label="Title" name="title" margin="dense" />
+        <TextField fullWidth label="Description" name="description" margin="dense" />
         </DialogContent>
         <DialogActions>
-          <Button autoFocus onClick={handleClose}>
-            Save changes
+          <Button autoFocus onClick={handleClose}   variant="contained">
+           Add post
           </Button>
         </DialogActions>
       </BootstrapDialog>
