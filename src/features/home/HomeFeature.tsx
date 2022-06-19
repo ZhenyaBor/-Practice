@@ -5,7 +5,7 @@ import Loading from "../loading/Loadong";
 import Pagination from "./components/Pagination";
 
 export const HomeFeature = () => {
-  const { posts, loader,  onChangePagination, pagination } = useDataPost();
+  const { posts, loader, onChangePagination, pagination } = useDataPost();
 
   if (loader) {
     return <Loading />;
@@ -14,11 +14,9 @@ export const HomeFeature = () => {
   return (
     <>
       <HomePosts>
-        {posts.map((post) => (
-          <HomePost key={post.id} data={post} />
-        ))}
+        <HomePost data={posts} />
       </HomePosts>
-      <Pagination onChenge={ onChangePagination} pagination={pagination}/>
+      <Pagination onChenge={onChangePagination} pagination={pagination} />
     </>
   );
 };

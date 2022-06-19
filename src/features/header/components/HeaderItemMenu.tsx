@@ -1,16 +1,16 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { Link } from "react-router-dom";
-import {MenuItem} from '@mui/material';
-import {MenuNav} from '../interface';
+import { MenuItem } from "@mui/material";
+import { MenuNav } from "../interface";
 
 interface Props {
-  item:MenuNav;
+  item: MenuNav;
 }
 
-const HeaderItemMenu = ({ item: { name, url } }:Props) => {
+const HeaderItemMenu = ({ item: { name, url } }: Props) => {
   return (
-    <MenuItem >
+    <MenuItem>
       <Link
         css={css`
           color: white;
@@ -24,7 +24,7 @@ const HeaderItemMenu = ({ item: { name, url } }:Props) => {
       >
         {name}
       </Link>
-      </MenuItem >
+    </MenuItem>
   );
 };
 
