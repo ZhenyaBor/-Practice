@@ -12,6 +12,7 @@ import {
   Button,
   TextField,
 } from "@mui/material";
+import { AddPostForm } from "./AddPostForm";
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
@@ -86,7 +87,7 @@ export default function Popup() {
           Add a post
         </BootstrapDialogTitle>
         <DialogContent dividers>
-        <form></form>
+          <AddPostForm />
         </DialogContent>
         <DialogActions>
           <Button autoFocus onClick={handleClose} variant="contained">
