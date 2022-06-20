@@ -1,4 +1,4 @@
-import PostTeg from "../home/components/PostTeg";
+import { PostTeg } from "../home/components/PostTeg";
 import Loading from "../loading/Loadong";
 import Post from "./components/Post";
 import { usePost } from "./hooks/usePost";
@@ -17,12 +17,10 @@ export const MorePost = () => {
   }
 
   return (
-    <>
-      <Post post={post}>
-        {post.tags?.map((tag) => {
-          return <PostTeg key={Math.random()} tag={tag} />;
-        })}
-      </Post>
-    </>
+    <Post post={post}>
+      {post.tags.map((tag) => {
+        return <PostTeg key={tag} tag={tag} />;
+      })}
+    </Post>
   );
 };

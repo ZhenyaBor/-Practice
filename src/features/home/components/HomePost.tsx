@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import PostTeg from "./PostTeg";
+import { PostTeg } from "./PostTeg";
 import { Link } from "react-router-dom";
 import { PostInterface } from "../interface";
 import {
@@ -12,11 +12,10 @@ import {
 } from "@mui/material";
 
 interface Props {
-  data: PostInterface;
-  map: any;
+  data: PostInterface[];
 }
 
-const HomePost = ({ data }: { data: Props }) => (
+const HomePost = ({ data }: Props) => (
   <>
     {data.map((post: PostInterface) => (
       <Card key={post.id}>

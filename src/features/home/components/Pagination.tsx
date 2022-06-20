@@ -1,14 +1,14 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import PaginationMUI from "@mui/material/Pagination";
-import {PaginationInterface} from "../interface"
+import { PaginationInterface } from "../interface";
 
 interface Props {
-  pagination : PaginationInterface;
-  onChenge:(e:any,value:number) =>void
+  pagination: PaginationInterface;
+  onChenge: (e: any, value: number) => void;
 }
 
-const Pagination = ({onChenge,pagination:{total,page}}:Props) => {
+const Pagination = ({ onChenge, pagination: { total, page } }: Props) => {
   return (
     <div
       css={css`
@@ -28,7 +28,13 @@ const Pagination = ({onChenge,pagination:{total,page}}:Props) => {
         }
       `}
     >
-      <PaginationMUI onChange={onChenge} page={page} count={total} variant="outlined" color="primary" />
+      <PaginationMUI
+        onChange={onChenge}
+        page={page}
+        count={total}
+        variant="outlined"
+        color="primary"
+      />
     </div>
   );
 };

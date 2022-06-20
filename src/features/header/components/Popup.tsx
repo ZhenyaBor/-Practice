@@ -4,7 +4,6 @@ import * as React from "react";
 import { styled } from "@mui/material/styles";
 import CloseIcon from "@mui/icons-material/Close";
 import {
-
   IconButton,
   DialogActions,
   DialogContent,
@@ -87,12 +86,11 @@ export default function Popup() {
           Add a post
         </BootstrapDialogTitle>
         <DialogContent dividers>
-        <TextField fullWidth label="Title" name="title" margin="dense" />
-        <TextField fullWidth label="Description" name="description" margin="dense" />
+        <form></form>
         </DialogContent>
         <DialogActions>
-          <Button autoFocus onClick={handleClose}   variant="contained">
-           Add post
+          <Button autoFocus onClick={handleClose} variant="contained">
+            Add post
           </Button>
         </DialogActions>
       </BootstrapDialog>
