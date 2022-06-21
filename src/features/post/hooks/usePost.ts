@@ -10,13 +10,11 @@ export const usePost = () => {
     useEffect(() => {
       fetch(`https://dummyjson.com/posts/${postId}`)
         .then((res) => res.json())
-        .then((data) => {          
+        .then((data) => {        
           setPosts(data);
           setLoader(false)
         });
     }, []);
-console.log(post);
-
     return{
         post,
         loader,

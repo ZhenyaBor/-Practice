@@ -7,7 +7,8 @@ import { Button } from "@mui/material";
 
 type Inputs = {
   title: string;
-  description: string;
+  body: string;
+  userId: number;
 };
 
 export const AddPostForm = () => {
@@ -19,13 +20,19 @@ export const AddPostForm = () => {
   } = useForm<Inputs>({ mode: "onBlur" });
 
   const onSubmit: SubmitHandler<Inputs> = (dataForm) => {
+    const { title, body, userId } = dataForm;
     fetch("https://dummyjson.com/posts/add", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(dataForm),
+      body: JSON.stringify({
+        title,
+        body,
+        userId,
+      }),
     })
       .then((res) => res.json())
       .then(console.log);
+
     reset();
   };
 
@@ -53,7 +60,7 @@ export const AddPostForm = () => {
         variant="outlined"
         {...register("title", {
           required: "Поле обязательно для ввода...",
-          pattern: { value: /^[A-Za-z]+$/i, message: "Только буквы" },
+          pattern: { value: /^[A-Za-z]+$/i, message: "Только ENGL буквы" },
           minLength: { value: 5, message: "Минимум 5 слов" },
         })}
       />
@@ -73,9 +80,9 @@ export const AddPostForm = () => {
       <TextField
         label="Description"
         variant="outlined"
-        {...register("description", {
+        {...register("body", {
           required: "Поле обязательно для ввода...",
-          pattern: { value: /^[A-Za-z]+$/i, message: "Только буквы" },
+          pattern: { value: /^[A-Za-z]+$/i, message: "Только ENGL буквы" },
           minLength: { value: 7, message: "Минимум 7 слов" },
         })}
       />
@@ -90,9 +97,33 @@ export const AddPostForm = () => {
           }
         `}
       >
-        {errors?.description && (
-          <p>{errors?.description.message || "error!!!"}</p>
-        )}
+        {errors?.body && <p>{errors?.body.message || "error!!!"}</p>}
+      </div>
+
+      <TextField
+        label="userId"
+        variant="outlined"
+        {...register("userId", {
+          required: "Поле обязательно для ввода...",
+          maxLength: { value: 2, message: "Мaксимум 2 числа" },
+          pattern: {
+            value: /^[0-9]$/,
+            message: "Ввeдите только цыфры от 0 до 9",
+          },
+        })}
+      />
+      <div
+        css={css`
+          padding: 10px 0;
+          height: 40px;
+          p {
+            font-size: 13px;
+            color: red;
+            text-decoration: underline;
+          }
+        `}
+      >
+        {errors?.userId && <p>{errors?.userId.message || "error!!!"}</p>}
       </div>
       <Button autoFocus type="submit" variant="contained">
         Add post

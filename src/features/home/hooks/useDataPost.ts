@@ -30,6 +30,8 @@ export const useDataPost = () => {
         }
       });
   },[pagination.page]);
+  
+  
 
   return{
       posts,
