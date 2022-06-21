@@ -1,45 +1,15 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import TextField from "@mui/material/TextField";
-import { useForm, SubmitHandler } from "react-hook-form";
 import { Button } from "@mui/material";
-
-type Inputs = {
-  title: string;
-  body: string;
-  userId: number;
-};
+import { usePostHoks } from "./hook/usePostHoks";
 
 interface Props {
   handleClose: () => void;
 }
 
 export const AddPostForm = ({ handleClose }: Props) => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    reset,
-  } = useForm<Inputs>({ mode: "onBlur" });
-
-  const onSubmit: SubmitHandler<Inputs> = (dataForm) => {
-    const { title, body, userId } = dataForm;
-
-    fetch("https://dummyjson.com/posts/add", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        title,
-        body,
-        userId,
-      }),
-    })
-      .then((res) => res.json())
-      .then();
-
-    reset();
-  };
-
+  const { errors, handleSubmit, onSubmit, register } = usePostHoks(handleClose);
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
