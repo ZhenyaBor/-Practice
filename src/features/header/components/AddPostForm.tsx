@@ -1,7 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import TextField from "@mui/material/TextField";
-import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { Button } from "@mui/material";
 
@@ -21,6 +20,7 @@ export const AddPostForm = () => {
 
   const onSubmit: SubmitHandler<Inputs> = (dataForm) => {
     const { title, body, userId } = dataForm;
+
     fetch("https://dummyjson.com/posts/add", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -31,18 +31,9 @@ export const AddPostForm = () => {
       }),
     })
       .then((res) => res.json())
-      .then(console.log);
+      .then();
 
     reset();
-  };
-
-  const [open, setOpen] = useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-  const handleClose = () => {
-    setOpen(false);
   };
 
   return (
