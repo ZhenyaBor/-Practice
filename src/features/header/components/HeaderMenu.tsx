@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { Toolbar, Stack, AppBar, Button, Divider } from "@mui/material";
+import { Toolbar, Stack, AppBar, Divider } from "@mui/material";
 import { ReactNode } from "react";
 import Popup from "./Popup";
 

@@ -10,7 +10,6 @@ import {
   DialogTitle,
   Dialog,
   Button,
-  TextField,
 } from "@mui/material";
 import { AddPostForm } from "./AddPostForm";
 
@@ -53,6 +52,7 @@ const BootstrapDialogTitle = (props: DialogTitleProps) => {
   );
 };
 
+
 export default function Popup() {
   const [open, setOpen] = React.useState(false);
 
@@ -90,9 +90,6 @@ export default function Popup() {
           <AddPostForm />
         </DialogContent>
         <DialogActions>
-          <Button autoFocus onClick={handleClose} variant="contained">
-            Add post
-          </Button>
         </DialogActions>
       </BootstrapDialog>
     </div>
