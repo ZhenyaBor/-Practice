@@ -46,8 +46,8 @@ export const AddPostForm = ({ handleClose }: Props) => {
         variant="outlined"
         {...register("body", {
           required: "Поле обязательно для ввода...",
+          minLength: { value: 7, message: "Минимум 7 букв" },
           pattern: { value: /^[A-Za-z]+$/i, message: "Только ENGL буквы" },
-          minLength: { value: 7, message: "Минимум 7 слов" },
         })}
       />
       <div
