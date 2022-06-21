@@ -10,7 +10,11 @@ type Inputs = {
   userId: number;
 };
 
-export const AddPostForm = () => {
+interface Props {
+  handleClose: () => void;
+}
+
+export const AddPostForm = ({ handleClose }: Props) => {
   const {
     register,
     handleSubmit,
@@ -57,8 +61,7 @@ export const AddPostForm = () => {
       />
       <div
         css={css`
-          padding: 10px 0;
-          heigth: 40px;
+          padding: 15px 0;
           p {
             font-size: 13px;
             color: red;
@@ -79,8 +82,7 @@ export const AddPostForm = () => {
       />
       <div
         css={css`
-          padding: 10px 0;
-          height: 40px;
+          padding: 15px 0;
           p {
             font-size: 13px;
             color: red;
@@ -96,7 +98,6 @@ export const AddPostForm = () => {
         variant="outlined"
         {...register("userId", {
           required: "Поле обязательно для ввода...",
-          maxLength: { value: 2, message: "Мaксимум 2 числа" },
           pattern: {
             value: /^[0-9]$/,
             message: "Ввeдите только цыфры от 0 до 9",
@@ -105,8 +106,7 @@ export const AddPostForm = () => {
       />
       <div
         css={css`
-          padding: 10px 0;
-          height: 40px;
+          padding: 15px 0;
           p {
             font-size: 13px;
             color: red;

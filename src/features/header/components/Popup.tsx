@@ -52,7 +52,6 @@ const BootstrapDialogTitle = (props: DialogTitleProps) => {
   );
 };
 
-
 export default function Popup() {
   const [open, setOpen] = React.useState(false);
 
@@ -87,10 +86,9 @@ export default function Popup() {
           Add a post
         </BootstrapDialogTitle>
         <DialogContent dividers>
-          <AddPostForm />
+          <AddPostForm handleClose={handleClose} />
         </DialogContent>
-        <DialogActions>
-        </DialogActions>
+        <DialogActions></DialogActions>
       </BootstrapDialog>
     </div>
   );
