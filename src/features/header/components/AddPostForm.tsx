@@ -5,9 +5,8 @@ import { Button } from "@mui/material";
 import { usePostHoks } from "./hook/usePostHoks";
 
 interface Props {
-  handleClose: () => void;  
+  handleClose: () => void;
 }
-
 
 export const AddPostForm = ({ handleClose }: Props) => {
   const { errors, handleSubmit, onSubmit, register } = usePostHoks(handleClose);
@@ -22,12 +21,13 @@ export const AddPostForm = ({ handleClose }: Props) => {
       `}
     >
       <TextField
+        //error={errors?.title}
         label="Title"
         variant="outlined"
         {...register("title", {
           required: "Поле обязательно для ввода...",
           pattern: { value: /^[A-Za-z]+$/i, message: "Только ENGL буквы" },
-          minLength: { value: 5, message: "Минимум 5 слов" },
+          minLength: { value: 5, message: "Минимум 5 букв" },
         })}
       />
       <div
@@ -43,9 +43,10 @@ export const AddPostForm = ({ handleClose }: Props) => {
         {errors?.title && <p>{errors?.title.message || "error!!!"}</p>}
       </div>
       <TextField
+        //error={errors?.body}
         label="Description"
         variant="outlined"
-       {...register("body", {    
+        {...register("body", {
           required: "Поле обязательно для ввода...",
           minLength: { value: 7, message: "Минимум 7 букв" },
           pattern: { value: /^[A-Za-z]+$/i, message: "Только ENGL буквы" },
@@ -65,6 +66,7 @@ export const AddPostForm = ({ handleClose }: Props) => {
       </div>
 
       <TextField
+        //error={errors?.userId}
         label="userId"
         variant="outlined"
         {...register("userId", {
