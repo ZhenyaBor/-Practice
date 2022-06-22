@@ -5,8 +5,9 @@ import { Button } from "@mui/material";
 import { usePostHoks } from "./hook/usePostHoks";
 
 interface Props {
-  handleClose: () => void;
+  handleClose: () => void;  
 }
+
 
 export const AddPostForm = ({ handleClose }: Props) => {
   const { errors, handleSubmit, onSubmit, register } = usePostHoks(handleClose);
@@ -44,7 +45,7 @@ export const AddPostForm = ({ handleClose }: Props) => {
       <TextField
         label="Description"
         variant="outlined"
-        {...register("body", {
+       {...register("body", {    
           required: "Поле обязательно для ввода...",
           minLength: { value: 7, message: "Минимум 7 букв" },
           pattern: { value: /^[A-Za-z]+$/i, message: "Только ENGL буквы" },

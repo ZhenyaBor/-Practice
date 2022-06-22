@@ -1,5 +1,4 @@
 import { useForm, SubmitHandler } from "react-hook-form";
-
 type Inputs = {
     title: string;
     body: string;
@@ -28,9 +27,9 @@ export const usePostHoks = ( handleClose: () => void) => {
         })
           .then((res) => res.json())
           .then((data)=>{
-            handleClose()
+      
           });
-    
+          handleClose()
         reset();
       };
 
