@@ -3,7 +3,7 @@ import { HomeFeature, MorePost } from "../../features";
 
 export const AddRouter = () => (
   <Routes>
-    <Route path="/" element={<HomeFeature/>} />
-    <Route path="/post/:postId" element={<MorePost/>} />
+    <Route path="/" element={<HomeFeature />} />
+    <Route path="/post/:postId" element={<MorePost />} />
   </Routes>
 );
