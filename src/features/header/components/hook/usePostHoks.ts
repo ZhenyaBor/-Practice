@@ -29,7 +29,7 @@ export const usePostHoks = (handleClose: () => void) => {
       .then((data) => {});
     handleClose();
     reset();
-    alert("Пост успешно добавлен");
+    alert("Пост успешно добавлен!!");
   };
 
   return {
