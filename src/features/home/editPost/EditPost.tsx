@@ -3,6 +3,7 @@ import { css } from "@emotion/react";
 import { EditPostInterface } from "./interface";
 import { useEditPost } from "./hooks/useEditPost";
 import Loading from "../../loading/Loadong";
+import { Box, FormEdit } from "./components";
 
 interface Props {
   editpost: EditPostInterface;
@@ -17,15 +18,8 @@ export const EditPost = () => {
     return <Loading />;
   }
   return (
-    <div
-      css={css`
-        width: 600px;
-        margin: 100px auto;
-        background-color: white;
-        color: black;
-      `}
-    >
-      <p>dasdsadasdddddddddddddddddddddd</p>
-    </div>
+    <Box>
+      <FormEdit></FormEdit>
+    </Box>
   );
 };
