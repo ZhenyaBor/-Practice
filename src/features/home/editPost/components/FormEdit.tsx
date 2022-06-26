@@ -17,6 +17,14 @@ export const FormEdit = () => {
         width: 300px;
       `}
     >
+      <h4
+        css={css`
+          margin-bottom: 20px;
+          font-size: 20px;
+        `}
+      >
+        Редактировать пост
+      </h4>
       <TextField
         //error={errors?.title}
         label="Title"
