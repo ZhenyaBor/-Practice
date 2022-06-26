@@ -18,5 +18,6 @@ export const useEditPost = () => {
   return {
     editpost,
     loader,
+    editpostId,
   };
 };

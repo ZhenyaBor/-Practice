@@ -2,7 +2,6 @@ import { useForm, SubmitHandler } from "react-hook-form";
 type Inputs = {
   title: string;
   body: string;
-  userId: number;
 };
 
 export const usePostHoks = () => {
@@ -14,21 +13,19 @@ export const usePostHoks = () => {
   } = useForm<Inputs>({ mode: "onBlur" });
 
   const onSubmit: SubmitHandler<Inputs> = (dataForm) => {
-    const { title, body, userId } = dataForm;
+    const { title, body } = dataForm;
 
-    fetch("https://dummyjson.com/posts/add", {
-      method: "POST",
+    fetch("https://dummyjson.com/posts/1", {
+      method: "PUT" /* or PATCH */,
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         title,
-        body,
-        userId,
       }),
     })
       .then((res) => res.json())
       .then((data) => {});
     reset();
-    alert("Пост успешно добавлен!!");
+    alert("вы успешно отредактировали Пост!!!");
   };
 
   return {

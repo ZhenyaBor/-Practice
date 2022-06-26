@@ -39,53 +39,7 @@ export const FormEdit = () => {
       >
         {errors?.title && <p>{errors?.title.message || "error!!!"}</p>}
       </div>
-      <TextField
-        //error={errors?.body}
-        label="Description"
-        variant="outlined"
-        {...register("body", {
-          required: "Поле обязательно для ввода...",
-          minLength: { value: 7, message: "Минимум 7 букв" },
-          pattern: { value: /^[A-Za-z]+$/i, message: "Только ENGL буквы" },
-        })}
-      />
-      <div
-        css={css`
-          padding: 15px 0;
-          p {
-            font-size: 13px;
-            color: red;
-            text-decoration: underline;
-          }
-        `}
-      >
-        {errors?.body && <p>{errors?.body.message || "error!!!"}</p>}
-      </div>
 
-      <TextField
-        //error={errors?.userId}
-        label="userId"
-        variant="outlined"
-        {...register("userId", {
-          required: "Поле обязательно для ввода...",
-          pattern: {
-            value: /^[0-9]$/,
-            message: "Ввeдите только цыфры от 0 до 9",
-          },
-        })}
-      />
-      <div
-        css={css`
-          padding: 15px 0;
-          p {
-            font-size: 13px;
-            color: red;
-            text-decoration: underline;
-          }
-        `}
-      >
-        {errors?.userId && <p>{errors?.userId.message || "error!!!"}</p>}
-      </div>
       <Button autoFocus type="submit" variant="contained">
         Add post
       </Button>
