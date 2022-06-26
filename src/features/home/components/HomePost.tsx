@@ -9,6 +9,7 @@ import {
   Typography,
   Stack,
   CardActions,
+  Button,
 } from "@mui/material";
 
 interface Props {
@@ -58,6 +59,13 @@ const HomePost = ({ data }: Props) => (
           </Stack>
           <CardActions sx={{ mt: 1.5 }}>
             <div>🖤 {post.reactions}</div>
+            <Link to={`/editPost/${post.id}`}>
+              <div>
+                <Button sx={{ ml: 11 }} variant="outlined">
+                  edit message
+                </Button>
+              </div>
+            </Link>
           </CardActions>
         </CardContent>
       </Card>

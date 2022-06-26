@@ -1,22 +1,22 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { PostInterface } from "../interface";
+import { EditPostInterface } from "../interface";
 
-export const usePost = () => {
-  const [post, setPosts] = useState({} as PostInterface);
-  const { postId } = useParams();
+export const useEditPost = () => {
+  const [editpost, setEditPosts] = useState({} as EditPostInterface);
+  const { editpostId } = useParams();
   const [loader, setLoader] = useState(true);
 
   useEffect(() => {
-    fetch(`https://dummyjson.com/posts/${postId}`)
+    fetch(`https://dummyjson.com/posts/${editpostId}`)
       .then((res) => res.json())
       .then((data) => {
-        setPosts(data);
+        setEditPosts(data);
         setLoader(false);
       });
   }, []);
   return {
-    post,
+    editpost,
     loader,
   };
 };
