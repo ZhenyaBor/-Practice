@@ -32,7 +32,8 @@ export const AddPostForm = ({ handleClose }: Props) => {
       />
       <div
         css={css`
-          padding: 15px 0;
+          padding: 5px 0;
+          height: 40px;
           p {
             font-size: 13px;
             color: red;
@@ -54,7 +55,8 @@ export const AddPostForm = ({ handleClose }: Props) => {
       />
       <div
         css={css`
-          padding: 15px 0;
+          padding: 5px 0;
+          height: 40px;
           p {
             font-size: 13px;
             color: red;
@@ -79,7 +81,8 @@ export const AddPostForm = ({ handleClose }: Props) => {
       />
       <div
         css={css`
-          padding: 15px 0;
+          padding: 5px 0;
+          height: 40px;
           p {
             font-size: 13px;
             color: red;

@@ -37,7 +37,8 @@ export const FormEdit = () => {
       />
       <div
         css={css`
-          padding: 15px 0;
+          height: 40px;
+          padding: 5px 0;
           p {
             font-size: 13px;
             color: red;
