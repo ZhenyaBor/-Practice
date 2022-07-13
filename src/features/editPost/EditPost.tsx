@@ -1,6 +1,6 @@
 import { EditPostInterface } from "./interface";
 import { useEditPost } from "./hooks/useEditPost";
-import Loading from "../../loading/Loadong";
+import Loading from "../loading/Loadong";
 import { Box, FormEdit } from "./components";
 
 interface Props {

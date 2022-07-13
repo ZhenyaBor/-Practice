@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { HomeFeature, MorePost } from "../../features";
-import { EditPost } from "../../features/home/editPost/EditPost";
+import { EditPost } from "../../features/editPost";
 
 export const AddRouter = () => (
   <Routes>
